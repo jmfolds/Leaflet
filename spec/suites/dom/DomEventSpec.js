@@ -66,7 +66,7 @@ describe('DomEvent', function () {
 		it('removes a previously added listener', function () {
 			var listener = sinon.spy();
 
-			L.DomEvent.addListener(el, 'click', listener);
+			L.DomEvent.addListener(el, 'click', listener, this);
 			L.DomEvent.removeListener(el, 'click', listener);
 
 			simulateClick(el);
